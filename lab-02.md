@@ -25,7 +25,7 @@ plastic_waste <- plastic_waste %>%
 
 ### Exercise 1
 
-tout les continents produisent généralement entre 0 et 1 tonne de
+tout les continents produisent généralement entre 0 et 1 kg/jour de
 déchets par habitant, l’Afrique et L’Asie ont une production plus faible
 car elle sont plus concentré entre 0,00 et 0,25 . l’Europe et L’Amérique
 du Nord ont une production plus élevée avec davantage pays proches de 1
@@ -59,24 +59,38 @@ graphique ,une valeur constante .
 Boxplot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=continent, y=plastic_waste_per_cap)) + 
+  geom_boxplot()
 ```
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
 
 Violin plot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=continent, y=plastic_waste_per_cap)) + 
+  geom_violin()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-violin-1.png)<!-- -->
+
+les violins plots permettent de voir la forme de la distribution
+complète alors que les boxplots résument seulement la position centrale
+et la dispersion .
 
 ### Exercise 4
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=plastic_waste_per_cap, y=mismanaged_plastic_waste_per_cap , colour = continent )) +
+  geom_point()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- -->
+
+le graphique nous montre une relation positive et à peu près linéaire
+entre la production de déchets plastiques par habitant et la quantité de
+déchets plastiques mal gérés par habitant . nous remarquons une tendance
+positive .
 
 ### Exercise 5
 
