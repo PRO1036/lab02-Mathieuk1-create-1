@@ -1,7 +1,7 @@
 ---
 title: "Lab 02 - Plastic waste"
-author: "Votre nom"
-date: "La date"
+author: "kadio morokro mathieu-marie"
+date: "22/09/2025"
 output: github_document
 ---
 
@@ -26,18 +26,23 @@ plastic_waste <- plastic_waste %>%
 ## Exercices
 
 ### Exercise 1
+tout les continents produisent généralement entre 0 et 1 tonne de déchets par habitant, l'Afrique et L'Asie ont une production plus faible car elle sont plus concentré entre 0,00 et 0,25 . l'Europe et L'Amérique du Nord ont une production plus élevée avec davantage pays proches de 1 . l'Océanie et l'Amérique du sud ont aussi  une production faible car la majorité est concentré vers 0,25 et peu de pays vers 0,50.
 
 ```{r plastic-waste-continent}
-# insert code here
+ggplot(plastic_waste , aes(x=plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2) + 
+  facet_wrap(~ continent)
 ```
 
 ### Exercise 2
 
 ```{r plastic-waste-density}
-# insert code here
+ggplot(plastic_waste , aes(x=plastic_waste_per_cap, colour = continent , fill = continent ,  )) +
+  geom_density(adjust=1, alpha=0.5
+              )
 ```
 
-Réponse à la question...
+color et fill se règle dans aes car ils sont envoyés directement sur la variable continent et alpha dans geom_density car il concerne tout le graphique ,une valeur constante .
 
 ### Exercise 3
 
