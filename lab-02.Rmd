@@ -77,14 +77,16 @@ le graphique nous montre une relation positive et à peu près linéaire entre l
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+ggplot(plastic_waste, aes(x=total_pop, y= plastic_waste_per_cap )) +
+  geom_point()
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+ggplot(plastic_waste, aes(x=coastal_pop, y= plastic_waste_per_cap )) +
+  geom_point()
 ```
 
-Réponse à la question...
+non ,  les deux sont parreil il n'y a pas de relation claire pour les deux graphiques .
 
 ## Conclusion
 

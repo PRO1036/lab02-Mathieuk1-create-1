@@ -95,14 +95,24 @@ positive .
 ### Exercise 5
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=total_pop, y= plastic_waste_per_cap )) +
+  geom_point()
 ```
+
+    ## Warning: Removed 10 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-total-1.png)<!-- -->
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=coastal_pop, y= plastic_waste_per_cap )) +
+  geom_point()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-population-coastal-1.png)<!-- -->
+
+non , les deux sont parreil il n’y a pas de relation claire pour les
+deux graphiques .
 
 ## Conclusion
 
